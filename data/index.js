@@ -18,6 +18,11 @@ const menuList = [
     {name:"About",path:"/about"},
     {name:"Contact",path:"/contact"},
     {name:"Post",path:"/posts"},
-    {name:"Project",path:"/projects"}
+    {name:"Project",path:"/projects"},
+    {name:"admin",path:"/admin/projects"}
+];
+const menuAdmin = [
+    {name:"add",path:'/admin/projects/add'},
+    {name:"update",path:'/admin/projects/:id/update'}
 ]
-export { projectList, menuList };
+export { projectList, menuList ,menuAdmin};

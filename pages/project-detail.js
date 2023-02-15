@@ -10,7 +10,7 @@ const projectDetailPage = ({data:{id}}) => {// destructoring thằng id
     })
     
     // check trước khi hiển thị ra
-    if(!project){
+    if(!project){  
         return router.navigate("/notfound")
     }
     return `

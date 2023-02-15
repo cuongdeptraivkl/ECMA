@@ -1,6 +1,8 @@
 import { render, router } from "./libs";
 
 import AboutPage from "./pages/about";
+import AdminProjectsAddPage from "./pages/admin/project-add";
+//import AdminProjectUpdatePage from "./pages/admin/project-update";
 import AdminProjectsPage from "./pages/admin/projects";
 import ContactPage from "./pages/contact";
 import HomePage from "./pages/home";
@@ -23,16 +25,27 @@ router.on("/contact", () => {
 router.on("/posts", () => {
     render(PostsPage, app)
 });
-router.on("/projects", () => {
+router.on("/projects", (abc) => {
+    console.log(abc);
     render(ProjectsPage, app)
 });
 router.on("/projects/:id",(params)=>{
-    // console.log(params);
+     console.log(params);
     render(function(){
         return projectDetailPage(params)
     },app)
 })
-router.on('/admin/projects', () => render(AdminProjectsPage, app))
+
+router.on('/admin/projects', () => render(AdminProjectsPage, app));
+router.on('/admin/projects/add', () => render(AdminProjectsAddPage, app));
+
+// router.on("/admin/projects/:id/update",(params)=>{
+//     render(function(){
+//         return AdminProjectUpdatePage(params)
+      
+//     },app)
+// })
+
 router.notFound(()=>{
     render(notFound,app)
 })
