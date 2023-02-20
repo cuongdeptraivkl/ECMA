@@ -2,7 +2,7 @@ import { render, router } from "./libs";
 
 import AboutPage from "./pages/about";
 import AdminProjectsAddPage from "./pages/admin/project-add";
-//import AdminProjectUpdatePage from "./pages/admin/project-update";
+import AdminProjectUpdatePage from "./pages/admin/project-update";
 import AdminProjectsPage from "./pages/admin/projects";
 import ContactPage from "./pages/contact";
 import HomePage from "./pages/home";
@@ -10,7 +10,7 @@ import notFound from "./pages/notFound";
 import PostsPage from "./pages/posts";
 import projectDetailPage from "./pages/project-detail";
 import ProjectsPage from "./pages/projects";
-
+import scrollFunction from "./libs/scrollMenu";
 const app = document.querySelector("#app");
 
 router.on("/", () => {
@@ -37,15 +37,15 @@ router.on("/projects/:id",(params)=>{
 })
 
 router.on('/admin/projects', () => render(AdminProjectsPage, app));
+
 router.on('/admin/projects/add', () => render(AdminProjectsAddPage, app));
 
-// router.on("/admin/projects/:id/update",(params)=>{
-//     render(function(){
-//         return AdminProjectUpdatePage(params)
-      
-//     },app)
-// })
-
+router.on("/admin/projects/:id/update",(params)=>{
+    render(function(){
+        return AdminProjectUpdatePage(params)
+    
+    },app)
+})
 router.notFound(()=>{
     render(notFound,app)
 })

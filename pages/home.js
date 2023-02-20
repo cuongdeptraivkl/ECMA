@@ -1,11 +1,17 @@
 import Header from "../components/Header";
+import AboutPage from "./about";
+import banner from "./banner";
+import ContactPage from "./contact";
+import ProjectPage from "./projects";
 
 const HomePage = () => {
     /*html*/
     return `
     ${Header()}
-        <h1>Hello, This is Home Page</h1>
-        <a href="https://www.facebook.com/cuong.dev.8123">click me!!!</a>
+    ${banner()}
+    ${AboutPage()}
+    ${ProjectPage()}
+    ${ContactPage()}
     `;
 };
 export default HomePage;

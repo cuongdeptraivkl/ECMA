@@ -1,10 +1,8 @@
 import Navbar from "./Navbar";
 
 const Header = () => {
-    return `
-        <nav>
-            ${Navbar()}
-        </nav>
-    `
+    return `   
+        ${Navbar()}
+      `
 };
 export default Header;
