@@ -35,6 +35,7 @@ const ProjectPage = ()=>{
  
        </div>
      </div>
+     <h3 class="text-center h3-project"><a href="github.com">See more on Github</a></h3>
      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
        <span class="visually-hidden">Previous</span>
@@ -46,7 +47,7 @@ const ProjectPage = ()=>{
    </div>
      
      </div>
-      
+  
     `;
     // ${ProjectList({ projects: projectList})}
 }
