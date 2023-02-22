@@ -1,54 +1,50 @@
-import Header from "../components/Header";
-import ProjectList from "../components/ProjectList";
+
 import { projectList } from "../data";
+import { useEffect, useState } from "../libs";
 
 const ProjectPage = ()=>{
-    console.log(projectList.map(item => 
-        /*html*/
-        `
-        <p>Project Id: ${item.id}</p>
-        `).join(""));
+  const [projects, setProjects] = useState(projectList)
+  
+  useEffect(()=>{
+    fetch('http://localhost:3000/projects')
+    .then((Response)=>Response.json())
+    .then(data=>setProjects(data))
+  },[])
         
     return `
-     <div id="myprojects" class="container-fluid">
-     <div id="carouselExampleAutoplaying" class="carousel slide slide-show-projects container-fluid" data-bs-ride="carousel"  >
-     <h1 class="text-center text-project">Projects</h1>
-     <div class="carousel-inner container">
-     <a href="github.com">
-       <div class="carousel-item active item-project">
-           <img src="src/img/coza.png" class="d-block w-75 container">
-         <h3 class="w-h-75"><a href="github.com">đây là Tiêu đề ảnh thứ nhất</a></h3>
-         <p>đây là tittle của ảnh thứu nahast</p>
-       </div>
-       </a>
-       <div class="carousel-item  item-project">
-       <a href="github.com">
-           <img src="src/img/coza.png" class="d-block w-75 container">
-           <h3><a href="github.com">đây là Tiêu đề ảnh thứ nhất</a></h3>
-         <p>đây là tittle của ảnh thứu 2</p>
-      </a>
-       </div>
-       <div class="carousel-item  item-project">
-           <img src="src/img/coza.png" class="d-block w-75 container">
-           <h3><a href="github.com">đây là Tiêu đề ảnh thứ nhất</a></h3>
-         <p>đây là tittle của ảnh thứu 3</p>
- 
-       </div>
-     </div>
-     <h3 class="text-center h3-project"><a href="github.com">See more on Github</a></h3>
-     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-       <span class="visually-hidden">Previous</span>
-     </button>
-     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-       <span class="visually-hidden">Next</span>
-     </button>
-   </div>
-     
-     </div>
-  
+    
+    
+    
+    <div id="myprojects" class="container-fluid">
+    <div id="carouselExampleAutoplaying" class="carousel slide slide-show-projects container-fluid" data-bs-ride="carousel"  data-interval="100" >
+    <h1 class="text-center text-project">Projects</h1>
+    <div class="carousel-inner container">
+
+    ${projects.map((item) =>`
+                <a href="${item.link}">
+                  <div class="carousel-item active item-project">
+                      <img src="${item.src}" class="d-block img-projects container">             
+                    <h3 class="w-h-75"><a href="github.com">${item.name}</a></h3>
+                    <p>${item.title}</p>
+                    </div>
+                    </a>
+                    
+                 `).join("")}
+                
+            </div>
+            <h3 class="text-center h3-project"><a href="https://github.com/cuongdeptraivkl">See more on Github <i class='bx bxl-github'></i></a></h3>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+            
+      </div>
     `;
-    // ${ProjectList({ projects: projectList})}
+   
 }
 export default ProjectPage;

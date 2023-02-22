@@ -18,7 +18,7 @@ const banner = () => {
                <img width="96%" src="src/img/avt-removebg-preview.png" alt="">
             
             </div>
-          <div class="item-decor" data-aos="fade-up">
+          <div class="item-decor" >
               <i class='bx bxl-html5 img1' style='color:#cfcfcf'  ></i>
               <i class='bx bx-circle img2' style='color:#cfcfcf' ></i>
               <i class='bx bxs-file-json img3' style='color:#cfcfcf' ></i>

@@ -1,7 +1,5 @@
 
-import Header from "../../components/Header";
 import menuAdmin from "../../components/menuAdmin";
-
 import {projectList } from "../../data";
 import { router, useEffect, useState } from "../../libs";
 
@@ -10,15 +8,12 @@ const AdminProjectsPage = () => {
     const [projects, setProjects] = useState(projectList)
     // hàm useEffect sẽ được gọi sau khi return xong
     useEffect(()=>{
-        // const projects = JSON.parse(localStorage.getItem('projects')) ||[];
-        // setProjects(projects)
         fetch('http://localhost:3000/projects')
         .then((Response)=>Response.json())
         .then(data=>setProjects(data))
-    },[])
+    },[])  
     useEffect(() => {
         const btns = document.querySelectorAll('.btn-remove'); // [btn,btn,btn]
-        const btnUpdate = document.querySelectorAll('.btn-update')
         for(let btn of btns){
             // viết sự kiện cho button
             btn.addEventListener('click', function(){
@@ -32,47 +27,49 @@ const AdminProjectsPage = () => {
                 // thiết lập lại mảng projects ban đầu
                 setProjects(newProjects)
                 })
-               // console.log(id);
-                // lọc ra 1 mảng mới không bao gồm id đã click vào
-                
+              
             })
         }
-        // for (let btn of btnUpdate){
-        //     btn.addEventListener('click',function(){
-        //         const id = btn.dataset.id;
-        //         console.log(id);
-             
-        //     })
-        // }
+      
     })
     /*html*/
     return `
    ${menuAdmin()}
  
     
-   
+<div class="project container">
+       
     <table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>Số Thứ Tự</th>            <th>Ten du an</th>
-            <th>Xóa</th>
-        </tr>
-    </thead>
-    <tbody>
-        ${projects.map((project, index) => `
-      
+        <thead>
             <tr>
-                <td>${index + 1}</td>
-                <td>${project.name}</td>
-                <td>
-                    <button data-id="${project.id}" class="btn btn-remove btn-danger">Remove</button>
-                    <a href="/admin/projects/${project.id}/update"> <button data-id="${project.id}" class="btn btn-primary btn-update">sửa</button></a>
-                </td>
+                <th>Number</th>      
+                <th>IMG</th>
+                <th>Name Project</th>
+                <th>Title</th>
+                <th>Link</th>
+                <th>Function</th>
             </tr>
-        `).join("")}
-        
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+        ${projects.map((project, index) => `
+  
+        <tr>
+            <td>${index + 1}</td>
+            <td>${project.src}</td>
+            <td>${project.name}</td>
+            <td>${project.title}</td>
+            <td>${project.link}</td>
+            <td>
+                <button data-id="${project.id}" class="btn btn-remove btn-danger">Remove</button>
+                <a href="/admin/projects/${project.id}/update"> <button data-id="${project.id}" class="btn btn-primary btn-update">Edit</button></a>
+            </td>
+        </tr>
+         `).join("")}
+    
+            </tbody>
+    </table>
+
+</div>
     `
 };
 

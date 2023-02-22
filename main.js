@@ -11,6 +11,7 @@ import PostsPage from "./pages/posts";
 import projectDetailPage from "./pages/project-detail";
 import ProjectsPage from "./pages/projects";
 import scrollFunction from "./libs/scrollMenu";
+import login from "./pages/login";
 const app = document.querySelector("#app");
 
 router.on("/", () => {
@@ -39,6 +40,8 @@ router.on("/projects/:id",(params)=>{
 router.on('/admin/projects', () => render(AdminProjectsPage, app));
 
 router.on('/admin/projects/add', () => render(AdminProjectsAddPage, app));
+
+router.on('login',() => render(login,app));
 
 router.on("/admin/projects/:id/update",(params)=>{
     render(function(){

@@ -1,21 +1,22 @@
 const projectList = [
-    {   src:"./src/img/about.jpg",
+    {   
         id: 1, 
+        src:"./src/img/about.jpg",
         name: "Dự án mẫu",
-        title:"đây là title của project"
-        
+        title:"đây là title của project",
+        link:'github.com'
     },
     {   src:"./src/img/AVT.jpg",
         id: 2,
         name: "Dự án 1",
-        title:"đây là title của project"
-        
+        title:"đây là title của project",
+        link:'github.com'
     },
     {   src:"./src/img/other.jpg",
         id: 3,
         name: "Dự án tốt nghiệp",
-        title:"đây là title của project"
-        
+        title:"đây là title của project",
+        link:'github.com'
     },
 ];
 
@@ -28,13 +29,10 @@ const menuList = [
     { src:"",name:"admin",path:"/admin/projects"}
 ];
 const menunav = [
-    {name:"Home",path:"#home"},
+    {name:"Home",path:"/#home"},
     {name:"About",path:"/#about"},
     {name:"Project",path:"/#myprojects"},
     {name:"Contact",path:"/#contact"}
 ];
-// const menuAdmin = [
-//     {name:"add",path:'/admin/projects/add'},
-//     {name:"update",path:'/admin/projects/:id/update'}
-// ]
+
 export { projectList, menuList ,menunav};

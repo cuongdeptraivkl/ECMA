@@ -3,7 +3,7 @@ window.onscroll = function() {scrollFunction()};
 const scrollFunction = () => {
     const navbarFixded = document.querySelector('.navbarFixded')
  
-  if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
 
    navbarFixded.style.backgroundColor="#fff";
    navbarFixded.style.top="0"
@@ -11,9 +11,9 @@ const scrollFunction = () => {
    navbarFixded.style.boxShadow="0px 2px 10px gray"
   } else {
     
-   navbarFixded.style.background="#fff"
+  navbarFixded.style.background="transparent"
    navbarFixded.style.top="0px"
-   navbarFixded.style.padding="5px 0px 20px 0px"
+   navbarFixded.style.padding="5px 0px 26px 0px"
    navbarFixded.style.boxShadow="none"
   }
 
