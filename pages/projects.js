@@ -21,13 +21,13 @@ const ProjectPage = ()=>{
     <div class="carousel-inner container">
 
     ${projects.map((item) =>`
-                <a href="${item.link}">
+              
                   <div class="carousel-item active item-project">
-                      <img src="${item.src}" class="d-block img-projects container">             
-                    <h3 class="w-h-75"><a href="github.com">${item.name}</a></h3>
-                    <p>${item.title}</p>
-                    </div>
-                    </a>
+                     <div class="over-img-project container">  <a href="/projects/${item.id}"> <img src="${item.src}" class="d-block img-projects container">  </a></div>            
+                      <h3 class="w-h-75 h3-project-item"><a href="/projects/${item.id}">${item.name}</a></h3>
+                      <p>${item.title}</p>
+                  </div>
+                   
                     
                  `).join("")}
                 

@@ -10,7 +10,7 @@ const menuAdmin = () => {
 
         ${logo()}   
         <h3>List projects Github</h3>
-        <a href="/admin/projects/add">  <button class="btn btn-outline-success">Thêm</button></a>
+        <a href="/admin/projects/add">  <button class="btn btn-outline-success">Add Project</button></a>
 
         
        

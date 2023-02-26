@@ -6,10 +6,11 @@ const menuNavbar = () => {
    return`
    ${menunav.map((menu) => {
 
-    return `
+    return `   
         <li class="nav-item">
           <a class="nav-link" href="${menu.path}">${menu.name}</a>
-        </li>          
+        </li>  
+            
             `
   }).join("")}
   `

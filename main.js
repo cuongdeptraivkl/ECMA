@@ -43,6 +43,9 @@ router.on('/admin/projects/add', () => render(AdminProjectsAddPage, app));
 
 router.on('login',() => render(login,app));
 
+router.on('/register',() => render(login,app));
+
+
 router.on("/admin/projects/:id/update",(params)=>{
     render(function(){
         return AdminProjectUpdatePage(params)

@@ -35,4 +35,11 @@ const menunav = [
     {name:"Contact",path:"/#contact"}
 ];
 
-export { projectList, menuList ,menunav};
+
+const menunavProject = [
+    {name:"About Web",path:`/projects/id/#aboutWeb`},
+    {name:"Technology used",path:"/#technology"},
+    {name:"Function",path:"/#Function"}
+];
+
+export { projectList, menuList ,menunav,menunavProject};

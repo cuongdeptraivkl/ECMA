@@ -1,25 +1,26 @@
 {
   "projects": [
     {
-      "name": "test nữa nè 1",
-      "title": "đây là title",
-      "src": "https://picsum.photos/seed/picsum/200/300",
-      "link": "https://chat.openai.com/chat",
-      "id": 14
+      "id": 1,
+      "name": "E-commerce website 'Cozashop' ",
+      "src": [
+        "https://res.cloudinary.com/dxxdsgful/image/upload/v1677135153/Portfolio/bgk7lf2zliu1ntwqn3lo.png"
+      ],
+      "title": "This is a clothing e-commerce website designed by me. It has a harmonious and luxurious design, along with fancy functionalities. Click to learn more.",
+      "titleDetail": "anh chưa từng nói sx yêu em suốt đời, anh chưa từng nghĩ anh làm được điều đó. nhưng anh sẽ hứa anh yêu em thật nhiều",
+      "demotech": "undefined",
+      "link": "https://cuongdeptraivkl.github.io/Cozashop/"
     },
     {
-      "id": 15,
-      "name": "test- update 2",
-      "src": "https://picsum.photos/seed/picsum/200/300",
-      "title": "abc-update",
-      "link": "https://chat.openai.com/chat-update"
-    },
-    {
-      "id": 16,
-      "name": "đây là sự án test hihihii",
-      "src": "https://picsum.photos/200",
-      "title": "abc-update",
-      "link": "https://chat.openai.com/chat-update"
+      "id": 2,
+      "name": "hello world",
+      "src": [
+        "https://res.cloudinary.com/dxxdsgful/image/upload/v1677116101/Portfolio/nubxlwzym3cwpcgr3eh4.png"
+      ],
+      "title": "sdgsdgdsg",
+      "titleDetail": "We offer a wide range of high-quality products, including                                 electronics, fashion, beauty, and more. Our website is designed to make your shopping                                 experience easy and enjoyable. You can browse our products by category, search for                                 specific                                 items, and filter your results by price, brand, and more.                                  We strive to provide excellent customer service, so if you have any questions or                                 concerns,                                 please don't hesitate to contact us. We offer secure payment options and fast shipping                                 to                                 ensure that your purchases are delivered to you in a timely and secure manner.                                  Our store also offers a loyalty program that rewards our customers for their continued                                 business. By signing up, you can earn points for every purchase, which can be redeemed                                 for                                 discounts on future orders. We also offer special promotions and deals throughout the                                 year,                                 so be sure to sign up for our newsletter to stay informed.                                  Thank you for choosing our online store for your shopping needs. We hope you enjoy your                                 experience and find the products you're looking for.",
+      "demotech": "chỗ này là nơicập nhật côpng nghệ mới nhất hàng đầu Viet Nam ",
+      "link": "https://cuongdeptraivkl.github.io/Cozashop/"
     }
   ]
 }
